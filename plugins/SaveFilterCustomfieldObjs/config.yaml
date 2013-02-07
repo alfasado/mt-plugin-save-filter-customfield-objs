@@ -1,0 +1,55 @@
+name: SaveFilterCustomfieldObjs
+id  : SaveFilterCustomfieldObjs
+key:  savefiltercustomfieldobjs
+version: 0.1
+author_link: http://alfasado.net/
+author_name: Alfasado Inc.
+l10n_class: SaveFilterCustomfieldObjs::L10N
+description: <__trans phrase="For check all required CustomFields.">
+applications:
+    cms:
+        callbacks:
+            cms_save_filter.entry:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.page:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.asset:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.template:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.category:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.folder:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.author:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.comment:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.blog:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+            cms_save_filter.field:
+                - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+                  priority: 1
+callbacks:
+    api_post_save.entry:
+        - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+          priority: 1
+    api_post_save.author:
+        - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+          priority: 1
+    api_post_save.comment:
+        - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+          priority: 1
+    api_post_save.comment:
+        - handler: $savefiltercustomfieldobjs::SaveFilterCustomfieldObjs::Callbacks::_save_filter
+          priority: 1
+
